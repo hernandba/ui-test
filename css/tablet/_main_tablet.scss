@@ -1,0 +1,96 @@
+@media all and (min-width: 768px) {
+    html, body {
+        font-size: 14px;
+    }
+
+    .hero {
+        max-height: 38rem;
+    }
+
+    .hero__background {
+        top: -6.5rem;
+        left: 0;
+        width: 110vw;
+        height: auto;
+    }
+
+    .featured-card__glass-background {
+        background:
+            center no-repeat linear-gradient(var(--color-dark-background), var(--color-dark-background)),
+            7vw -6.5rem/115vw auto no-repeat url(../assets/img/pope-francis.png);
+    }
+
+    .featured-card__content {
+        padding: 2rem 1.5rem;
+    }
+
+    .featured-card__more-info {
+        display: inline-block;
+        margin: 0;
+        font-weight: 300;
+    }
+
+    .featured-card__buttons {
+        margin: 0 -1.5rem -2rem;
+    }
+
+    .banner-top .banner__left {
+        flex-basis: 20%;
+    }
+
+    .banner-top .banner__right {
+        flex-basis: 80%;
+    }
+
+    .banner-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    .banner-bottom .banner__background {
+        top: -230%;
+    }
+
+    .banner-bottom .banner__right {
+        width: auto;
+    }
+
+    .banner-bottom .banner__heading {
+        margin-bottom: 0;
+        font-size: 1.5rem;
+    }
+
+    .banner-bottom .banner__cta {
+        width: 16rem;
+    }
+
+    .footer {
+        align-items: flex-start;
+    }
+
+    .footer__links ul,
+    .footer__social {
+        display: flex;
+    }
+
+    .footer__links ul li {
+        padding: 0;
+        margin-right: 2rem;
+        font-size: 1rem;
+    }
+
+    .footer__social {
+        align-items: center;
+    }
+
+    .footer__social span {
+        margin-right: 1rem;
+        color: var(--color-dark-gray);
+        font-size: 0.833rem;
+    }
+
+    .footer__social > ul {
+        margin-top: 3px;
+    } 
+}

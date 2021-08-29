@@ -34,6 +34,12 @@
         margin: 0 -1.5rem -2rem;
     }
 
+    .cards-container{
+        flex-direction: column;
+        gap: 18px;
+    }
+
+
     .banner-top .banner__left {
         flex-basis: 20%;
     }
@@ -92,5 +98,5 @@
 
     .footer__social > ul {
         margin-top: 3px;
-    } 
+    }
 }

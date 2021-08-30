@@ -461,13 +461,21 @@ main h2 {
 }
 
 @media (max-width: 767px) {
+
     .cards-slider {
         overflow: auto;
         scroll-behavior: smooth;
         display: flex;
 
+        .cards-grid{
+            flex-wrap: nowrap;
+        }
+
         .cards-container {
             display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 0px;
 
             &>*+* {
                 margin-left: 12px;
@@ -475,7 +483,7 @@ main h2 {
 
             .card {
                 width: 49%;
-                min-width: 300px;
+                max-width: 300px;
                 height: 300px;
 
                 .card_general{
@@ -484,6 +492,12 @@ main h2 {
                     .card_info {
                         margin-left: 6px;
                         flex-direction: column;
+
+                        .card_info_main{
+                            .card_name{
+                                -webkit-line-clamp: 2;
+                            }
+                        }
                     }
                 }
             }
@@ -491,7 +505,38 @@ main h2 {
     }
 }
 
+.cards-container{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+}
 
+.cards-grid{
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    .card {
+        margin-bottom: 1%;
+        position: relative;
+
+        .card_general{
+            padding-top: 20%;
+
+            .card_info {
+                margin-left: 6px;
+                flex-direction: column;
+
+                .card_info_main{
+                    .card_name{
+                        font-size: 2rem;
+                        -webkit-line-clamp: 2;
+                    }
+                }
+            }
+        }
+    }
+}
 
 .card {
     background-color: gray;
@@ -525,13 +570,13 @@ main h2 {
 
                 .card_name {
                     display: -webkit-box;
-                    -webkit-line-clamp: 2;
+                    -webkit-line-clamp: 1;
                     -webkit-box-orient: vertical;
                     overflow: hidden;
 
                     margin-bottom: 5px;
                     color: white;
-                    font-size: 2.5rem;
+                    font-size: 2.5em;
                     font-weight: normal;
                 }
 
@@ -588,76 +633,6 @@ main h2 {
         }
 
     }
-
-    // .card_general{
-    //     display: flex;
-
-    //     .card_indicator{
-    //         width: 30px;
-    //         height: 30px;
-    //         display: flex;
-    //         flex: none;
-    //         justify-content: center;
-    //         align-items: center;
-    //         background-color: rgba(var(--color-green-positive), 1);
-    //     }
-
-    //     .card_info{
-    //         display: flex;
-    //         flex-shrink: 1;
-    //         margin-right: 34px;
-    //         margin-bottom: 12px;
-
-    //         .card_name{
-    //             display: -webkit-box;
-    //             -webkit-line-clamp: 2;
-    //             -webkit-box-orient: vertical;
-    //             overflow: hidden;
-
-    //             margin-bottom: 5px;
-    //             color: white;
-    //             font-size: 2.5rem;
-    //             font-weight: normal;
-    //         }
-
-    //         .card_description{
-    //             display: -webkit-box;
-    //             -webkit-line-clamp: 2;
-    //             -webkit-box-orient: vertical;
-    //             overflow: hidden;
-
-    //             margin: 0px 0px;
-    //             color: white;
-    //             font-size: 1.25rem;
-    //         }
-
-    //         .card_detail{
-    //             text-align: right;
-    //             color: white;
-    //         }
-
-    //         .card_buttons{
-    //             display: flex;
-    //             align-self: flex-end;
-
-    //             button{
-    //                 flex: none;
-    //                 margin-left: 12px;
-    //             }
-
-    //             .icon-button{
-    //                 padding: 7px 7px;
-    //             }
-
-    //             .vote-button{
-    //                 background-color: rgba(0, 0, 0, .6);
-    //                 border: 1px solid white;
-    //                 padding: 10px 15px;
-    //                 color: white;
-    //             }
-    //         }
-    //     }
-    // }
 
     .card_ruler {
         height: 36px;

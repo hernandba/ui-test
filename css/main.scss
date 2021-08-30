@@ -462,12 +462,18 @@ main h2 {
 
 @media (max-width: 767px) {
 
+    .main-title {
+        .dropdown {
+            display: none;
+        }
+    }
+
     .cards-slider {
         overflow: auto;
         scroll-behavior: smooth;
         display: flex;
 
-        .cards-grid{
+        .cards-grid {
             flex-wrap: nowrap;
         }
 
@@ -482,19 +488,19 @@ main h2 {
             }
 
             .card {
-                width: 49%;
                 max-width: 300px;
                 height: 300px;
+                background-size: cover;
 
-                .card_general{
+                .card_general {
                     margin-right: 34px;
 
                     .card_info {
                         margin-left: 6px;
                         flex-direction: column;
 
-                        .card_info_main{
-                            .card_name{
+                        .card_info_main {
+                            .card_name {
                                 -webkit-line-clamp: 2;
                             }
                         }
@@ -505,14 +511,67 @@ main h2 {
     }
 }
 
-.cards-container{
+.main-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+    .dropbtn {
+        width: 170px;
+        background-color: white;
+        border: 1px solid black;
+        color: black;
+        padding: 9px 16px;
+        font-size: 11px;
+        cursor: pointer;
+    }
+
+    .dropdown-content {
+        width: 170px;
+        display: none;
+        position: absolute;
+        background-color: white;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+
+        a {
+            color: black;
+            border: 1px solid black;
+            font-size: 11px;
+            text-align: center;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+
+            &:hover{
+                cursor: pointer;
+                background-color: var(--color-light-gray);
+            }
+        }
+    }
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: black;
+    color: white;
+}
+
+.cards-container {
     display: flex;
     flex-direction: column;
     gap: 12px;
     justify-content: center;
 }
 
-.cards-grid{
+.cards-grid {
     flex-wrap: wrap;
     flex-direction: row;
 
@@ -520,15 +579,15 @@ main h2 {
         margin-bottom: 1%;
         position: relative;
 
-        .card_general{
+        .card_general {
             padding-top: 20%;
 
             .card_info {
                 margin-left: 6px;
                 flex-direction: column;
 
-                .card_info_main{
-                    .card_name{
+                .card_info_main {
+                    .card_name {
                         font-size: 2rem;
                         -webkit-line-clamp: 2;
                     }
@@ -539,7 +598,12 @@ main h2 {
 }
 
 .card {
-    background-color: gray;
+    background-image: url('../assets/img/pope-francis.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-blend-mode: multiply;
+    background-color: grey;
+
     display: flex;
     flex: none;
     flex-direction: column;
@@ -554,11 +618,18 @@ main h2 {
         .card_indicator {
             width: 30px;
             height: 30px;
-            display: flex;
+            // display: flex;
             flex: none;
             justify-content: center;
             align-items: center;
+        }
+
+        .card_indicator_up {
             background-color: rgba(var(--color-green-positive), 1);
+        }
+
+        .card_indicator_down {
+            background-color: rgba(var(--color-yellow-negative), 1);
         }
 
         .card_info {
@@ -623,7 +694,7 @@ main h2 {
                         padding: 10px 15px;
                         color: white;
 
-                        &:hover{
+                        &:hover {
                             cursor: pointer;
                             background-color: rgba(0, 0, 0, 1);
                         }

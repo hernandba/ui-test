@@ -512,6 +512,9 @@ main h2 {
 }
 
 @media (max-width: 767px) {
+  .main-title .dropdown {
+    display: none;
+  }
   .cards-slider {
     overflow: auto;
     scroll-behavior: smooth;
@@ -540,9 +543,9 @@ main h2 {
     margin-left: 12px;
   }
   .cards-slider .cards-container .card {
-    width: 49%;
     max-width: 300px;
     height: 300px;
+    background-size: cover;
   }
   .cards-slider .cards-container .card .card_general {
     margin-right: 34px;
@@ -557,6 +560,64 @@ main h2 {
   .cards-slider .cards-container .card .card_general .card_info .card_info_main .card_name {
     -webkit-line-clamp: 2;
   }
+}
+
+.main-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown .dropbtn {
+  width: 170px;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  padding: 9px 16px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.dropdown .dropdown-content {
+  width: 170px;
+  display: none;
+  position: absolute;
+  background-color: white;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown .dropdown-content a {
+  color: black;
+  border: 1px solid black;
+  font-size: 11px;
+  text-align: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown .dropdown-content a:hover {
+  cursor: pointer;
+  background-color: var(--color-light-gray);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: black;
+  color: white;
 }
 
 .cards-container {
@@ -605,7 +666,11 @@ main h2 {
 }
 
 .card {
-  background-color: gray;
+  background-image: url("../assets/img/pope-francis.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-blend-mode: multiply;
+  background-color: grey;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -635,9 +700,6 @@ main h2 {
 .card .card_general .card_indicator {
   width: 30px;
   height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
@@ -647,7 +709,14 @@ main h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.card .card_general .card_indicator_up {
   background-color: rgba(var(--color-green-positive), 1);
+}
+
+.card .card_general .card_indicator_down {
+  background-color: rgba(var(--color-yellow-negative), 1);
 }
 
 .card .card_general .card_info {
@@ -797,6 +866,16 @@ main h2 {
 
 .d-none {
   display: none;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.button-selected {
+  border: 1px solid white;
 }
 
 @media all and (min-width: 500px) {

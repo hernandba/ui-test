@@ -578,6 +578,7 @@ main h2 {
     .card {
         margin-bottom: 1%;
         position: relative;
+        background-size: cover;
 
         .card_general {
             padding-top: 20%;
@@ -598,7 +599,7 @@ main h2 {
 }
 
 .card {
-    background-image: url('../assets/img/pope-francis.png');
+    // background-image: url('../assets/img/pope-francis.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-blend-mode: multiply;
@@ -715,7 +716,7 @@ main h2 {
         }
 
         .card_ruler_pos {
-            width: 25.5%;
+            // width: 25.5%;
             display: flex;
             align-items: center;
             justify-content: flex-start;

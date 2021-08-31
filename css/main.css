@@ -646,6 +646,7 @@ main h2 {
 .cards-grid .card {
   margin-bottom: 1%;
   position: relative;
+  background-size: cover;
 }
 
 .cards-grid .card .card_general {
@@ -666,7 +667,6 @@ main h2 {
 }
 
 .card {
-  background-image: url("../assets/img/pope-francis.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-blend-mode: multiply;
@@ -813,7 +813,6 @@ main h2 {
 }
 
 .card .card_ruler .card_ruler_pos {
-  width: 25.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

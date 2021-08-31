@@ -112,12 +112,12 @@
             <div class="cards-slider">
                 <div class="cards-container">
 
-                    <div class="card">
+                    <div class="card d-none">
                         <div class="card_general">
                             <div class="card_indicator card_indicator_up d-none">
                                 <img class="thumbs-up-img" src="assets/img/thumbs-up.svg" alt="thumbs up"/>
                             </div>
-                            <div class="card_indicator card_indicator_down d-flex">
+                            <div class="card_indicator card_indicator_down d-none">
                                 <img class="thumbs-up-img" src="assets/img/thumbs-down.svg" alt="thumbs up"/>
                             </div>
                             <div class="card_info">
@@ -127,13 +127,13 @@
                                 </div>
 
                                 <div class="card_info_add">
-                                    <p class="card_detail card_detail_info"><span class="card_updated">1 month ago</span> in <span class="card_category">Entertainment</span></p>
+                                    <p class="card_detail card_detail_info"><span class="card_updated">1</span> ago in <span class="card_category">Entertainment</span></p>
                                     <p class="card_detail card_thanks d-none">Thank you for your vote!</p>
                                     <div class="card_buttons">
-                                        <button class="icon-button" aria-label="thumbs up">
+                                        <button class="icon-button up-button" aria-label="thumbs up">
                                             <img src="assets/img/thumbs-up.svg" alt="thumbs up" />
                                         </button>
-                                        <button class="icon-button" aria-label="thumbs down">
+                                        <button class="icon-button down-button" aria-label="thumbs down">
                                             <img src="assets/img/thumbs-down.svg" alt="thumbs down" />
                                         </button>
                                         <button class="vote-button votenow-button">Vote Now</button>
@@ -146,57 +146,12 @@
                             <div class="card_ruler_pos">
                                 <div class="card_ruler_pos_indicator">
                                     <img src="assets/img/thumbs-up.svg" alt="thumbs up" />
-                                    <span>25.5%</span>
+                                    <span class="pos_percentage">25.5%</span>
                                 </div>
                             </div>
                             <div class="card_ruler_neg">
                                 <div class="card_ruler_neg_indicator">
-                                    <span>74.5%</span>
-                                    <img src="assets/img/thumbs-down.svg" alt="thumbs down" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card_general">
-                            <div class="card_indicator card_indicator_up d-none">
-                                <img class="thumbs-up-img" src="assets/img/thumbs-up.svg" alt="thumbs up"/>
-                            </div>
-                            <div class="card_indicator card_indicator_down d-flex">
-                                <img class="thumbs-up-img" src="assets/img/thumbs-down.svg" alt="thumbs up"/>
-                            </div>
-                            <div class="card_info">
-                                <div class="card_info_main">
-                                    <h2 class="card_name">Cristina Fernandez de Kirchner</h2>
-                                    <p class="card_description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, tenetur deleniti, illum architecto nisi itaque nam quibusdam doloremque.</p>
-                                </div>
-
-                                <div class="card_info_add">
-                                    <p class="card_detail card_detail_info"><span class="card_updated">1 month ago</span> in <span class="card_category">Entertainment</span></p>
-                                    <p class="card_detail card_thanks d-none">Thank you for your vote!</p>
-                                    <div class="card_buttons">
-                                        <button class="icon-button" aria-label="thumbs up">
-                                            <img src="assets/img/thumbs-up.svg" alt="thumbs up" />
-                                        </button>
-                                        <button class="icon-button" aria-label="thumbs down">
-                                            <img src="assets/img/thumbs-down.svg" alt="thumbs down" />
-                                        </button>
-                                        <button class="vote-button votenow-button">Vote Now</button>
-                                        <button class="vote-button voteagain-button d-none">Vote Again</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card_ruler">
-                            <div class="card_ruler_pos">
-                                <div class="card_ruler_pos_indicator">
-                                    <img src="assets/img/thumbs-up.svg" alt="thumbs up" />
-                                    <span>25.5%</span>
-                                </div>
-                            </div>
-                            <div class="card_ruler_neg">
-                                <div class="card_ruler_neg_indicator">
-                                    <span>74.5%</span>
+                                    <span class="neg_percentage">74.5%</span>
                                     <img src="assets/img/thumbs-down.svg" alt="thumbs down" />
                                 </div>
                             </div>
@@ -255,5 +210,10 @@
             </div>
         </footer>
     </div>
+
+    <script src="scripts/gridlist_option.js"></script>
+    <script src="scripts/getData.js"></script>
+    <script src="scripts/createCard.js"></script>
+    <script src="scripts/loadCards.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@ Zemoga Front End Development - Candidate Test v2.1
 --------------------------------------------------
 
 ### Deploy
-**1) Clone proyect**
+* **Clone proyect**
 
 * Clone repo from github in this link: [ui-test](https://github.com/hernandba/ui-test.git)
 * Or using command line execute:
